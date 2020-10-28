@@ -1,4 +1,4 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import PDFCourse from './App.vue'
 
-createApp(App).mount('#app')
+createApp(PDFCourse).mount('#PDFCourse')
