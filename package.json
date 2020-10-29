@@ -10,10 +10,14 @@
   },
   "dependencies": {
     "@types/pdfjs-dist": "^2.1.5",
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "pdfjs-dist": "^2.5.207",
     "toggle-fullscreen": "^0.4.2",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-axios": "^3.1.3",
+    "vue-keypress": "^2.1.1",
+    "vue-window-size": "^1.0.2"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",

@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
 import PDFCourse from './App.vue'
 
-createApp(PDFCourse).mount('#PDFCourse')
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+const app = createApp(PDFCourse)
+app.use(VueAxios, axios)
+app.mount('#PDFCourse')
