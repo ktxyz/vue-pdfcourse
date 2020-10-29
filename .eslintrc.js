@@ -17,7 +17,14 @@ module.exports = {
     'comma-dangle': [
       'error',
       'always-multiline'
-    ]
+    ],
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        'max': 3,
+      }
+    ],
+    "space-before-function-paren": ["error", "never"],
   },
   overrides: [
     {
