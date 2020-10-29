@@ -4,19 +4,21 @@
       <h1>BHP Solutions</h1>
     </section>
     <section class="controls">
+      <span class="currentPageCount" v-if="currentView == 1"></span>
       <button v-if="isFullscreen == false" v-on:click="runToggleFullscreen()">
         [ ]
       </button>
       <button v-if="isFullscreen == true" v-on:click="runToggleFullscreen()">
-        _X_
+        X
       </button>
     </section>
   </div>
   <div class="viewContainer">
     <section class="beginCourse" v-if="currentView == 0">
+      <h1 class="courseTitle">Alicja w krainie czarów</h1>
       <button v-on:click="currentView = 1">Rozpocznij kurs</button>
     </section>
-    <PDFSlides v-if="currentView == 1"></PDFSlides>
+    <PDFSlides fileUrl="szkolenie.pdf" v-if="currentView == 1"></PDFSlides>
   </div>
 </template>
 
@@ -42,9 +44,12 @@ export default defineComponent({
   methods: {
     runToggleFullscreen() {
       this.isFullscreen = !this.isFullscreen
-
       const element = document.getElementById('PDFCourse') as Element
       toggleFullscreen(element)
+    },
+
+    showCourse() {
+      this.currentView = 1
     },
   },
 })
@@ -64,16 +69,17 @@ button {
   outline: none;
   border: none;
 
-  background: rgba(35, 54, 95, 0.829);
+  background: rgba(35, 54, 95, 0.932);
   color: white;
   font-size: 1.2rem;
+  padding: 0.3rem 0.8rem;
 
   font-weight: 700;
 }
 
 button:hover {
   cursor: pointer;
-  background: rgba(35, 54, 95, 0.753);
+  background: rgba(35, 54, 95, 0.829);
 }
 
 button:active {
@@ -134,6 +140,19 @@ button:active {
     align-items: center;
 
     background: white;
+
+    .beginCourse {
+      margin-top: -5rem;
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .courseTitle {
+        text-align: center;
+        margin-bottom: 5rem;
+      }
+    }
   }
 }
 </style>

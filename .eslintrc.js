@@ -25,6 +25,10 @@ module.exports = {
       }
     ],
     "space-before-function-paren": ["error", "never"],
+    "@typescript-eslint/no-this-alias": ["error", {
+      "allowDestructuring": true, // Allow `const { props, state } = this`; false by default
+      "allowedNames": ["ref"] // Allow `const self = this`; `[]` by default
+    }],
   },
   overrides: [
     {

@@ -9,7 +9,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/pdfjs-dist": "^2.1.5",
     "core-js": "^3.6.5",
+    "pdfjs-dist": "^2.5.207",
     "toggle-fullscreen": "^0.4.2",
     "vue": "^3.0.0"
   },
